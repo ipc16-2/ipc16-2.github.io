@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Isaiah Charles — Rutgers accounting student and Accounting Analyst at WebBank.">
+  <title>Isaiah Charles | Accounting Portfolio</title>
+  <style>
+    :root {
+      --navy: #152b46;
+      --blue: #245b91;
+      --background: #f3f6fa;
+      --text: #253448;
+      --muted: #546478;
+      --border: #dce3ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    .container {
+      width: min(1050px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 75px 0 85px;
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      color: #bcd5f0;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 64px);
+      line-height: 1.1;
+      margin: 18px 0 24px;
+    }
+
+    .statement {
+      font-size: 20px;
+      color: #e2eaf4;
+      max-width: 760px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 20px;
+      background: white;
+      color: var(--navy);
+      border: 1px solid white;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: white;
+    }
+
+    .button:hover {
+      background: #dce9f7;
+      color: var(--navy);
+    }
+
+    section {
+      padding: 48px 0;
+      scroll-margin-top: 20px;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 29px;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .about-text {
+      max-width: 850px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skills li {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 9px 15px;
+      font-size: 15px;
+    }
+
+    .experience-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 26px;
+      margin-bottom: 18px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .experience-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .experience-card li {
+      margin-bottom: 8px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .project-label {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      font-size: 15px;
+    }
+
+    .project-skills {
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      margin-top: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 25px;
+    }
+
+    .contact-links a {
+      color: var(--blue);
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #cf8b20;
+      outline-offset: 5px;
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 45px 0 55px;
+      }
+
+      .statement {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 35px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#">Isaiah Charles</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <p class="eyebrow">Accounting · Rutgers Business School</p>
+        <h1>Isaiah Charles</h1>
+        <p class="statement">
+          I am a Rutgers accounting student and part-time Accounting
+          Analyst at WebBank, building experience in reconciliations,
+          journal entries, and financial reporting as I work toward a
+          career in accounting.
+        </p>
+        <div class="buttons">
+          <a class="button" href="#projects">Explore My Projects</a>
+          <a
+            class="button secondary"
+            href="https://www.linkedin.com/in/isaiah-charles-/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-text">
+        <p>
+          I am pursuing a Bachelor of Science in Accounting at Rutgers
+          Business School–New Brunswick, with an expected graduation
+          in Fall 2027. I plan to complete 150 credits as part of my
+          preparation for the CPA licensure process.
+        </p>
+        <p>
+          At WebBank, I support accounting operations through bank
+          reconciliations, journal entry preparation, and monitoring
+          financial records for three partners. My interests include
+          accounting, internal audit, and financial analysis.
+        </p>
+        <p>
+          Outside of work and classes, I participate in Rutgers
+          Men’s Club Soccer, the Rutgers University Accounting
+          Association, and ALPFA.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Professional &amp; Technical Skills</h2>
+      <ul class="skills">
+        <li>Bank Reconciliations</li>
+        <li>Journal Entry Preparation</li>
+        <li>General Ledger Reconciliations</li>
+        <li>Month-End Close Support</li>
+        <li>Microsoft Excel</li>
+        <li>Financial Statement Analysis</li>
+        <li>Microsoft PowerPoint</li>
+        <li>Attention to Detail</li>
+        <li>Teamwork &amp; Communication</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <article class="experience-card">
+        <h3>Accounting Analyst · WebBank</h3>
+        <p class="meta">Part-time | August 2026–Present</p>
+        <ul>
+          <li>
+            Prepare bank reconciliations and identify discrepancies
+            to support accurate financial records.
+          </li>
+          <li>
+            Monitor and maintain financial records for three partners.
+          </li>
+          <li>
+            Prepare journal entries for various accounting activities.
+          </li>
+        </ul>
+      </article>
+
+      <article class="experience-card">
+        <h3>Accounting Intern · WebBank</h3>
+        <p class="meta">May 2026–August 2026</p>
+        <ul>
+          <li>
+            Supported month-end close through journal entries,
+            general ledger reconciliations, and discrepancy resolution.
+          </li>
+          <li>
+            Used Microsoft Excel to organize and analyze accounting data.
+          </li>
+          <li>
+            Assisted with accounting activities involving partner
+            loans, collateral, and fee distributions.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-label">Financial Accounting Coursework</p>
+          <h3>McDonald’s Liquidity Analysis</h3>
+          <p>
+            Contributed to an analysis of McDonald’s financial
+            position, focusing on operating liabilities and
+            contingencies. Examined accounts payable, leases,
+            accrued expenses, and potential obligations to consider
+            their effects on liquidity.
+          </p>
+          <p class="project-skills">
+            Skills: Financial statement analysis, research,
+            and team presentation.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">Educational Job Simulation</p>
+          <h3>Goldman Sachs Internal Audit Simulation</h3>
+          <p>
+            Completed an educational simulation exploring internal
+            audit, including identifying risks, evaluating controls,
+            and considering monitoring activities. This was a
+            learning experience, not employment at Goldman Sachs.
+          </p>
+          <p class="project-skills">
+            Skills: Risk identification, internal controls,
+            and analytical thinking.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">Cost Accounting Coursework</p>
+          <h3>Strategy &amp; Profitability Analysis</h3>
+          <p>
+            Analyzed the Methuen D4H case using growth,
+            price-recovery, and productivity concepts to explain
+            changes in operating income. Connected financial
+            results with strategic objectives and balanced
+            scorecard measures.
+          </p>
+          <p class="project-skills">
+            Skills: Cost accounting, profitability analysis,
+            and performance measurement.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Let’s Connect</h2>
+      <p>
+        I am interested in opportunities to develop my accounting,
+        audit, and financial analysis experience.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:isaiah.charles@rutgers.edu">
+          isaiah.charles@rutgers.edu
+        </a>
+        <a
+          href="https://www.linkedin.com/in/isaiah-charles-/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Connect on LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Isaiah Charles
+    </div>
+  </footer>
+</body>
+</html>
